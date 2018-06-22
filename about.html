@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=500" />
+	<title>DDI | The Art of Being Noticed</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="js/lib/greensock/TweenMax.min.js"></script>
+	<script type="text/javascript" src="scrollmagic/ScrollMagic.js"></script>
+	<script type="text/javascript" src="scrollmagic/plugins/animation.gsap.js"></script>
+	<script type="text/javascript" src="scrollmagic/plugins/debug.addIndicators.js"></script>
+</head>
+<body>
+	<!--HEADER-->
+		<!--LOGO-->
+		<div class="header-overlay">
+			<img class="header-logo" src="img/DDI_LOGO_HORIZONTAL_111111.png">
+		</div>
+		<!--DRIPPING BACKGROUND-->
+		<canvas id="c"></canvas>
+	<!--CONTENT-->
+		<!--WHO ARE WE-->
+	<div id="content-wrapper">
+		<div id="example-wrapper">
+			<div class="scrollContent">
+				<section id="titlechart">
+					<div id="description">
+						<h1>The Art of Being Noticed</h1>
+						<p>It’s hardly new news that attention is an increasingly scarce and expensive commodity.</p>
+						<p>With ad avoidance a fact of life, there is really no point shouting at people – in fact research proves that trying to beat people into submission often backfires.*</p>
+						<p>Fortunately, there’s another way.</p>
+						<p>It’s about getting people to lean-in of their own free will, stirring a desire for more.</p>
+						<p>At DDI we do this by creating meaningful connections between people and brands that secure your business an unfair share of attention.</p>
+						<p>We call this The Art of Being Noticed.</p>
+						<p>If you want to stir up some real emotion, get in touch.</p>
+					</div>
+				</section>
+
+				<section class="demo" id="trigger1">
+					<div class="spacer s0"></div>
+					<div id="imagesequence">
+						<img id="myimg1"><br>
+					</div>
+					<div style="height: 1000px;"></div>
+					
+					
+					<script>
+					
+						// define WHO ARE WE images
+						var images1 = [
+							"img/whoarewe/Who Are We00.png",
+							"img/whoarewe/Who Are We01.png",
+							"img/whoarewe/Who Are We02.png",
+							"img/whoarewe/Who Are We03.png",
+							"img/whoarewe/Who Are We04.png",
+							"img/whoarewe/Who Are We05.png",
+							"img/whoarewe/Who Are We06.png",
+							"img/whoarewe/Who Are We07.png",
+							"img/whoarewe/Who Are We08.png",
+							"img/whoarewe/Who Are We09.png",
+							"img/whoarewe/Who Are We10.png",
+							"img/whoarewe/Who Are We11.png",
+							"img/whoarewe/Who Are We12.png",
+							"img/whoarewe/Who Are We13.png",
+							"img/whoarewe/Who Are We14.png",
+							"img/whoarewe/Who Are We15.png",
+							"img/whoarewe/Who Are We16.png",
+							"img/whoarewe/Who Are We17.png",
+							"img/whoarewe/Who Are We18.png",
+							"img/whoarewe/Who Are We19.png",
+							"img/whoarewe/Who Are We20.png",
+							"img/whoarewe/Who Are We21.png",
+							"img/whoarewe/Who Are We22.png",
+							"img/whoarewe/Who Are We23.png",
+							"img/whoarewe/Who Are We24.png"
+						];
+
+						// TweenMax can tween any property of any object. We use this object to cycle through the array
+						var obj = {curImg: 0};
+						// init controller
+						var controller = new ScrollMagic.Controller();
+						// create tween
+						var tween1 = TweenMax.to(obj, 0.5,{
+								curImg: images1.length - 1,	// animate propery curImg to number of images
+								roundProps: "curImg",				// only integers so it can be used as an array index
+								repeat: 0,									// repeat 3 times
+								immediateRender: true,			// load first image automatically
+								ease: Linear.easeNone,			// show every image the same ammount of time
+								onUpdate: function () {
+								  $("#myimg1").attr("src", images1[obj.curImg]); // set the image source
+								}
+							}
+						);
+						// build scene
+						var scene1 = new ScrollMagic.Scene({triggerElement: "#trigger1", duration:300, triggerHook: .3})
+								.setTween(tween1)
+								.addIndicators() // add indicators (requires plugin)
+								.addTo(controller);
+						
+						
+						
+						</script>
+					
+					
+				</section>
+				
+				<section class="demo" id="trigger2">
+					<div class="spacer s0"></div>
+					<div id="imagesequence">
+						<img id="myimg2"><br>
+					</div>
+					<div style="height: 1000px;"></div>
+					
+					<script>
+						
+						
+						
+					// define STATEMENT images
+						var images2 = [
+							"img/statement/F3 Statement00.png",
+							"img/statement/F3 Statement01.png",
+							"img/statement/F3 Statement02.png",
+							"img/statement/F3 Statement03.png",
+							"img/statement/F3 Statement04.png",
+							"img/statement/F3 Statement05.png",
+							"img/statement/F3 Statement06.png",
+							"img/statement/F3 Statement07.png",
+							"img/statement/F3 Statement08.png",
+							"img/statement/F3 Statement09.png",
+							"img/statement/F3 Statement10.png",
+							"img/statement/F3 Statement11.png",
+							"img/statement/F3 Statement12.png",
+							"img/statement/F3 Statement13.png",
+							"img/statement/F3 Statement14.png",
+							"img/statement/F3 Statement15.png",
+							"img/statement/F3 Statement16.png",
+							"img/statement/F3 Statement17.png",
+							"img/statement/F3 Statement18.png",
+							"img/statement/F3 Statement19.png",
+							"img/statement/F3 Statement20.png",
+							"img/statement/F3 Statement21.png",
+							"img/statement/F3 Statement22.png",
+							"img/statement/F3 Statement23.png"
+						];
+
+						// TweenMax can tween any property of any object. We use this object to cycle through the array
+						var obj = {curImg: 0};
+						// init controller
+						var controller = new ScrollMagic.Controller();
+						// create tween
+						var tween2 = TweenMax.to(obj, 0.5,{
+								curImg: images2.length - 1,	// animate propery curImg to number of images
+								roundProps: "curImg",				// only integers so it can be used as an array index
+								repeat: 0,									// repeat 3 times
+								immediateRender: true,			// load first image automatically
+								ease: Linear.easeNone,			// show every image the same ammount of time
+								onUpdate: function () {
+								  $("#myimg2").attr("src", images2[obj.curImg]); // set the image source
+								}
+							}
+						);
+						// build scene
+						var scene2 = new ScrollMagic.Scene({triggerElement: "#trigger2", duration:600})
+								.setTween(tween2)
+								.addIndicators() // add indicators (requires plugin)
+								.addTo(controller);
+				</script>
+					
+				</section>
+					
+					
+	
+			</div>
+		</div>
+	</div>
+	<!--PAINT DRIPS-->
+					
+					<script type="text/javascript"> 
+					var width = window.innerWidth,
+					height = window.innerHeight,
+					c = document.getElementById('c'),
+					ctx = c.getContext('2d');
+					c.width = width;
+					c.height = height;
+
+					var paint = [];
+					var fillPaint = [];
+					var totalPaints = width/80;
+					var size = 30;
+
+					function init(){
+						for (var i = 0; i < totalPaints; i++){
+							addPaint();
+						}
+						setInterval( update, 20 );
+					}
+
+					function drawPaint(x,y,size, colour) {
+						ctx.beginPath();
+						ctx.arc(x, y, size ,0 , Math.PI*2, true);
+						ctx.closePath();
+						ctx.fillStyle="#FFF200";
+						ctx.fill();
+					}
+
+					function fillPaint() {
+					ctx.fillRect(0,150,canvas.width,500);
+					}
+
+					function update(){
+						for (var i = 0; i < paint.length; i++){
+							paint[i].y = paint[i].y + paint[i].v;
+							if (paint[i].y > height + 60){
+								paint.splice(i,1);
+								addPaint();
+							}
+							drawPaint(paint[i].x, paint[i].y, paint[i].s, paint[i].c);
+						}
+					}
+
+					function addPaint(){
+						//Try 50 times
+						var i = 50;
+						while(i > 0){
+							size = Math.random() * size + 10;
+							x = Math.random() * width;
+
+							found = false;
+
+							//Dont Allow drips ontop of each other (Overtaking drops destroy the prettyness)
+							for (var j = 0; j < paint.length; j++){
+								if ((x + size > paint[j].x) && (x - size < paint[j].x + paint[j].s)){
+									found = true;
+									break;
+								}
+
+								if ((x - size < paint[j].x) && (x + size > paint[j].x - paint[j].s)){
+									found = true;
+									break;
+								}
+							}
+
+							if (found == false){
+								paint.push({s:size,
+										   x:x,
+										   y:-60,
+										   v:(Math.random() * 2) + 2,
+										   c:'#' + (Math.random() * 0x313131 + 0xaaaaaa | 0).toString(16)});
+								i--;
+								return;
+							}
+						}
+					}
+
+					init();
+					</script>
+	
+	
+	
+	
+
+</body>
+
+</html>
+
